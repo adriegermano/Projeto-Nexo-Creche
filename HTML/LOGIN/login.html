@@ -12,7 +12,7 @@
     <!-- Fonte Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/CSS/CSS - PROFESSOR/professor.css">
+    <link rel="stylesheet" href="/CSS/CSS - LOGIN/login.css">
 
     <!-- Ícone -->
     <link rel="shortcut icon" href="../../IMG/logo-nexo-icon.png" type="image/x-icon">
@@ -40,26 +40,16 @@
                 <h2>Bem vindo!</h2>
                 <p>Acesse sua conta para continuar</p>
 
-                <form action="../PROFESSOR/inicioPR.html">
+                <form onsubmit="redirecionar(event)">
 
                     <div class="mb-3">
                         <label for="email" class="form-label">E-mail</label>
-                        <input 
-                            type="email" 
-                            id="email" 
-                            class="form-control" 
-                            placeholder="seu@email.com" 
-                            required>
+                        <input type="email" id="email" class="form-control" placeholder="seu@email.com" required>
                     </div>
 
                     <div class="mb-1">
                         <label for="senha" class="form-label">Senha</label>
-                        <input 
-                            type="password" 
-                            id="senha" 
-                            class="form-control" 
-                            placeholder="********" 
-                            required>
+                        <input type="password" id="senha" class="form-control" placeholder="********" required>
                     </div>
 
                     <div class="forgot-password">
@@ -68,7 +58,7 @@
 
                     <div class="captcha-box">
                         <div class="captcha-left">
-                            <input type="checkbox">
+                            <input type="checkbox" id="captcha">
                             <span>Confirme que é humano</span>
                         </div>
 
@@ -83,6 +73,28 @@
                     </button>
 
                 </form>
+
+                <script>
+                    function redirecionar(event) {
+                        event.preventDefault();
+
+                        const email = document.getElementById("email").value;
+                        const captcha = document.getElementById("captcha").checked;
+
+                        if (!captcha) {
+                            alert("Por favor, confirme que você é humano.");
+                            return;
+                        }
+
+                        if (email.includes("@pais")) {
+                            window.location.href = "../PAIS/inicioPA.html";
+                        } else if (email.includes("@professor")) {
+                            window.location.href = "../PROFESSOR/inicioPR.html";
+                        } else {
+                            alert("E-mail inválido. Use um e-mail @pais ou @professor.");
+                        }
+                    }
+                </script>
 
             </div>
 
