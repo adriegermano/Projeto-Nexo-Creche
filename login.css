@@ -1,0 +1,353 @@
+/* =====================================
+    1. VARIÁVEIS GERAIS 
+======================================= */
+
+:root {
+    --roxo-principal: #5513D8;
+    --roxo-escuro: #320087;
+    --roxo-claro: #E2DEFE;
+
+    --fundo-pagina: #F3F1F5;
+    --fundo-login: #F1EDF4;
+    --branco: #FFFFFF;
+
+    --texto-principal: #111111;
+    --texto-menu: #140240;
+    --texto-secundario: #6B6870;
+    --texto-claro: #8A8790;
+
+    --cinza-avatar: #D9D9D9;
+    --borda-card: #D7D3DD;
+    --sombra-card: 0 2px 6px rgba(0, 0, 0, 0.12);
+
+    --verde-bg: #DEE7CD;
+    --verde-texto: #5B8507;
+
+    --rosa-bg: #FFDDE0;
+    --rosa-texto: #870022;
+
+    --verde-agua-bg: #CFEFE9;
+    --verde-agua-texto: #035D4E;
+
+    --alerta-bg: #FFE5E0;
+    --alerta-texto: #CA5100;
+
+    --largura-menu: 215px;
+}
+
+/* =====================================
+    2. RESET UNIVERSAL 
+======================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ======================================
+    3. LOGIN
+======================================= */
+
+body.pagina-login {
+    background-color: var(--fundo-login);
+    overflow: hidden;
+}
+
+body.pagina-login .login-page {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+/* Lado esquerdo */
+body.pagina-login .left-panel {
+    position: relative;
+    height: 100vh;
+    background-color: var(--roxo-principal);
+}
+
+/* Lado direito */
+body.pagina-login .right-panel {
+    height: 100vh;
+    background-color: var(--fundo-login);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Título Nexo Creche */
+body.pagina-login .brand-title {
+    position: absolute;
+    top: 10%;
+    left: 103%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+body.pagina-login .brand-title span {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+body.pagina-login .brand-title .nexo {
+    color: #ffffff;
+}
+
+body.pagina-login .brand-title .creche {
+    color: var(--roxo-principal);
+}
+
+/* Logo central */
+body.pagina-login .logo-fundo {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 390px;
+    max-width: 88%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    display: block;
+}
+
+/* Caixa do formulário */
+body.pagina-login .login-box {
+    width: 100%;
+    max-width: 410px;
+    transform: translateX(35px);
+}
+
+body.pagina-login .login-box h1,
+body.pagina-login .login-box h2,
+body.pagina-login .login-box h3 {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--texto-principal);
+    margin-bottom: 8px;
+}
+
+body.pagina-login .login-box .subtitulo,
+body.pagina-login .login-box > p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--texto-secundario);
+    margin-bottom: 66px;
+}
+
+body.pagina-login .form-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--texto-principal);
+    margin-bottom: 4px;
+}
+
+body.pagina-login .form-control {
+    width: 100%;
+    height: 32px;
+    border-radius: 12px;
+    border: 1px solid #444444;
+    background-color: transparent;
+    color: var(--texto-principal);
+    font-size: 0.85rem;
+    padding: 4px 12px;
+}
+
+body.pagina-login .form-control::placeholder {
+    color: #666666;
+}
+
+body.pagina-login .form-control:focus {
+    border-color: var(--roxo-principal);
+    outline: none;
+    box-shadow: 0 0 0 0.15rem rgba(85, 19, 216, 0.18);
+    background-color: transparent;
+}
+
+body.pagina-login .mb-3 {
+    margin-bottom: 18px !important;
+}
+
+body.pagina-login .mb-1 {
+    margin-bottom: 4px !important;
+}
+
+body.pagina-login .forgot-password {
+    width: 100%;
+    text-align: right;
+    margin-top: 4px;
+    margin-bottom: 46px;
+}
+
+body.pagina-login .forgot-password a {
+    color: var(--roxo-principal);
+    font-size: 0.78rem;
+    text-decoration: none;
+}
+
+body.pagina-login .forgot-password a:hover {
+    text-decoration: underline;
+}
+
+body.pagina-login .captcha,
+body.pagina-login .captcha-box {
+    width: 100%;
+    height: 64px;
+    border: 1px solid #9f9f9f;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 54px;
+}
+
+body.pagina-login .captcha-left {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 0.78rem;
+    color: #222222;
+}
+
+body.pagina-login .captcha-left input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+body.pagina-login .captcha-right {
+    text-align: center;
+    color: #222222;
+    line-height: 1.1;
+    font-size: 0.55rem;
+}
+
+body.pagina-login .captcha-right strong {
+    display: block;
+    font-size: 0.62rem;
+    font-weight: 800;
+}
+
+body.pagina-login .btn-login {
+    width: 100%;
+    height: 34px;
+    border: none;
+    border-radius: 11px;
+    background-color: var(--roxo-principal);
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+body.pagina-login .btn-login:hover {
+    background-color: var(--roxo-escuro);
+}
+
+body.pagina-login .btn-login:active {
+    transform: scale(0.99);
+}
+
+/* ======================================
+    4. RESPONSIVO LOGIN
+======================================= */
+
+@media (max-width: 576px) {
+    body.pagina-login {
+        overflow: auto;
+    }
+
+    body.pagina-login .left-panel {
+        height: 230px;
+    }
+
+    body.pagina-login .right-panel {
+        min-height: calc(100vh - 230px);
+        padding: 32px 18px;
+    }
+
+    body.pagina-login .brand-title span {
+        font-size: 2rem;
+    }
+
+    body.pagina-login .logo-fundo {
+        width: 400px;
+    }
+
+    body.pagina-login .login-box h1,
+    body.pagina-login .login-box h2,
+    body.pagina-login .login-box h3 {
+        font-size: 1.3rem;
+    }
+
+    body.pagina-login .captcha,
+    body.pagina-login .captcha-box {
+        height: 60px;
+        padding: 0 12px;
+    }
+
+    body.pagina-login .captcha-left {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 992px) {
+    body.pagina-login {
+        overflow: auto;
+    }
+
+    body.pagina-login .login-page {
+        min-height: 100vh;
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+
+    body.pagina-login .left-panel {
+        height: 280px;
+    }
+
+    body.pagina-login .right-panel {
+        height: auto;
+        min-height: calc(100vh - 280px);
+        padding: 40px 24px;
+    }
+
+    body.pagina-login .brand-title {
+        top: 18%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    body.pagina-login .brand-title span {
+        font-size: 2.5rem;
+    }
+
+    body.pagina-login .brand-title .creche {
+        color: #ffffff;
+    }
+
+    body.pagina-login .logo-fundo {
+        top: 65%;
+        left: 50%;
+        width: 230px;
+        transform: translate(-50%, -50%);
+    }
+
+    body.pagina-login .login-box {
+        max-width: 420px;
+        transform: none;
+    }
+
+    body.pagina-login .login-box .subtitulo,
+    body.pagina-login .login-box > p {
+        margin-bottom: 36px;
+    }
+}
