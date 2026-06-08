@@ -538,16 +538,6 @@ body.pagina-inicio .conteudo-pagina {
     position: relative;
 }
 
-body.pagina-inicio .conteudo-pagina::after {
-    content: "\F32F";
-    font-family: "bootstrap-icons";
-    position: absolute;
-    top: 24px;
-    right: 28px;
-    color: var(--roxo-principal);
-    font-size: 1rem;
-}
-
 body.pagina-inicio .titulo-inicio {
     margin: 0 0 18px 0;
     padding: 0;
@@ -825,18 +815,6 @@ body.pagina-inicio .icone-seta {
 body.pagina-turmas .conteudo-pagina {
     position: relative;
     padding: 42px 34px 36px 34px;
-}
-
-body.pagina-turmas .conteudo-pagina::after {
-    content: "\F32F";
-    font-family: "bootstrap-icons";
-
-    position: absolute;
-    top: 24px;
-    right: 28px;
-
-    color: var(--roxo-principal);
-    font-size: 1rem;
 }
 
 body.pagina-turmas .como-esta-o-dia-turma {
