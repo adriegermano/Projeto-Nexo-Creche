@@ -195,45 +195,91 @@ body.pagina-login .forgot-password a:hover {
     text-decoration: underline;
 }
 
+/* ==========================================================
+   MODIFICADO: Estilização Fiel ao Widget Cloudflare Turnstile (Opção B: Com Imagem)
+============================================================ */
 body.pagina-login .captcha,
 body.pagina-login .captcha-box {
     width: 100%;
-    height: 64px;
-    border: 1px solid #9f9f9f;
+    height: 65px;
+    border: 1px solid #e0e0e0;
     background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 15px;
     margin-bottom: 54px;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 body.pagina-login .captcha-left {
     display: flex;
     align-items: center;
-    gap: 9px;
-    font-size: 0.78rem;
-    color: #222222;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: #111111;
+    font-weight: 400;
 }
 
+/* Reset completo do Checkbox nativo para criar o quadrado perfeito */
 body.pagina-login .captcha-left input {
-    width: 18px;
-    height: 18px;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #c2c2c2;
+    border-radius: 4px;
     cursor: pointer;
+    background-color: #fafafa;
+    transition: background-color 0.2s, border-color 0.2s;
+    position: relative;
 }
 
+body.pagina-login .captcha-left input:hover {
+    border-color: #999999;
+}
+
+/* Estado ativo do Checkbox personalizado */
+body.pagina-login .captcha-left input:checked {
+    background-color: var(--roxo-principal);
+    border-color: var(--roxo-principal);
+}
+
+body.pagina-login .captcha-left input:checked::after {
+    content: "✓";
+    position: absolute;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Lado direito ajustado para receber a imagem no lugar do <strong> */
 body.pagina-login .captcha-right {
-    text-align: center;
-    color: #222222;
-    line-height: 1.1;
-    font-size: 0.55rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px; /* Espaço entre a imagem e as letras miúdas */
 }
 
-body.pagina-login .captcha-right strong {
+/* Controle do tamanho da imagem da logo */
+body.pagina-login .cf-logo-img {
+    height: 50px; 
+    width: auto;
     display: block;
-    font-size: 0.62rem;
-    font-weight: 800;
+    object-fit: contain;
 }
+
+body.pagina-login .captcha-right small {
+    font-size: 0.55rem;
+    color: #222222;
+    line-height: 1;
+}
+/* ========================================================== */
 
 body.pagina-login .btn-login {
     width: 100%;
@@ -295,7 +341,7 @@ body.pagina-login .btn-login:active {
     }
 
     body.pagina-login .captcha-left {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
     }
 }
 
