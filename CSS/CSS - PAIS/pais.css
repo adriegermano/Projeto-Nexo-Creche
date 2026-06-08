@@ -136,7 +136,7 @@ a {
     width: 100%;
 }
 
-.item-menu-pais > a {
+.item-menu-pais>a {
     width: 100%;
     min-height: 38px;
 
@@ -155,7 +155,7 @@ a {
     transition: 0.2s ease;
 }
 
-.item-menu-pais > a span {
+.item-menu-pais>a span {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -165,16 +165,16 @@ a {
     font-size: 0.9rem;
 }
 
-.item-menu-pais:hover > a {
+.item-menu-pais:hover>a {
     background-color: #F3F0FF;
     color: var(--roxo-principal);
 }
 
 /* Item ativo do menu */
 
-body.pagina-pais-inicio .menu-pais-inicio > a,
-body.pagina-pais-historico .menu-pais-historico > a,
-body.pagina-pais-mensagens .menu-pais-mensagens > a {
+body.pagina-pais-inicio .menu-pais-inicio>a,
+body.pagina-pais-historico .menu-pais-historico>a,
+body.pagina-pais-mensagens .menu-pais-mensagens>a {
     background-color: var(--roxo-claro);
     color: var(--roxo-escuro);
     font-weight: 600;
@@ -370,7 +370,7 @@ body.pagina-pais-inicio .topo-pais p {
     color: var(--texto-principal);
 }
 
-.info-crianca-pais > p {
+.info-crianca-pais>p {
     margin: 2px 0 8px 0;
 
     font-size: 0.58rem;
@@ -613,30 +613,25 @@ body.pagina-pais-historico .conteudo-pais {
 /* Data */
 
 .data-historico-pais {
-    width: 102px;
-    height: 30px;
-
-    margin-top: 20px;
-
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 8px;
-
-    padding: 0 9px;
-
-    background-color: var(--branco);
-    border: 1px solid #E0DDE5;
-    border-radius: 6px;
-
-    color: var(--roxo-escuro);
-    font-size: 0.72rem;
-
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    padding: 10px 14px;
+    border-radius: 10px;
+    width: fit-content;
+    cursor: pointer;
 }
 
-.data-historico-pais span {
-    color: var(--texto-secundario);
+/* INPUT INVISÍVEL */
+
+.input-calendario-pais {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+
+    cursor: pointer;
 }
 
 /* Lista */
@@ -873,6 +868,30 @@ body.pagina-pais-mensagens .icone-mensagem-pais {
 .data-mensagens-pais span {
     color: var(--texto-secundario);
     font-weight: 500;
+}
+
+/* Data */
+
+.data-historico-pais {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    padding: 10px 14px;
+    border-radius: 10px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+/* INPUT INVISÍVEL */
+
+.input-calendario-pais {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+
+    cursor: pointer;
 }
 
 /* Área principal */
@@ -1312,7 +1331,7 @@ body.pagina-pais-login {
     color: var(--texto-principal);
 }
 
-.caixa-login-pais > p {
+.caixa-login-pais>p {
     margin: 0 0 66px 0;
 
     font-size: 1rem;
@@ -1515,7 +1534,7 @@ body.pagina-pais-login {
         transform: none;
     }
 
-    .caixa-login-pais > p {
+    .caixa-login-pais>p {
         margin-bottom: 36px;
     }
 }
