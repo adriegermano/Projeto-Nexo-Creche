@@ -840,38 +840,6 @@ body.pagina-pais-mensagens .icone-mensagem-pais {
 
 /* Data */
 
-.data-mensagens-pais {
-    width: 104px;
-    height: 28px;
-
-    margin-left: auto;
-    margin-right: 12px;
-    margin-bottom: 10px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 6px;
-
-    padding: 0 9px;
-
-    background-color: var(--branco);
-    border: 1px solid #E0DDE5;
-    border-radius: 7px;
-
-    color: var(--roxo-escuro);
-    font-size: 0.72rem;
-
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-}
-
-.data-mensagens-pais span {
-    color: var(--texto-secundario);
-    font-weight: 500;
-}
-
-/* Data */
-
 .data-historico-pais {
     position: relative;
     display: flex;

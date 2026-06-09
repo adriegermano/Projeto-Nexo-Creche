@@ -1267,7 +1267,7 @@ body.pagina-agenda .data {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-body.pagina-agenda .data span {
+body.pagina-agenda {
     color: var(--texto-secundario);
 }
 
@@ -1386,7 +1386,7 @@ body.pagina-ocorrencias .data {
     font-size: 0.78rem;
 }
 
-body.pagina-ocorrencias .data span {
+body.pagina-ocorrencias {
     color: var(--texto-secundario);
 }
 
@@ -1586,7 +1586,7 @@ body.pagina-mensagens .data-mensagens {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 
-body.pagina-mensagens .data-mensagens span {
+body.pagina-mensagens {
     color: #7A7682;
     font-weight: 500;
 }
@@ -1819,7 +1819,7 @@ body.pagina-mensagens .painel-conversa p {
         height: auto;
     }
 
-    body.pagina-mensagens .data-mensagens {
+    body.pagina-mensagens {
         margin-right: 0;
     }
 }
@@ -1888,7 +1888,7 @@ body.pagina-mensagens .painel-conversa p {
         margin-bottom: 28px;
     }
 
-    body.pagina-agenda .data {
+    body.pagina-agenda {
         width: 120px;
     }
 
@@ -1901,7 +1901,7 @@ body.pagina-mensagens .painel-conversa p {
         gap: 14px;
     }
 
-    body.pagina-ocorrencias .data {
+    body.pagina-ocorrencias {
         align-self: flex-start;
     }
 
@@ -1921,7 +1921,7 @@ body.pagina-mensagens .painel-conversa p {
         padding: 20px 14px 20px 14px;
     }
 
-    body.pagina-mensagens .data-mensagens {
+    body.pagina-mensagens {
         margin-left: 0;
     }
 
