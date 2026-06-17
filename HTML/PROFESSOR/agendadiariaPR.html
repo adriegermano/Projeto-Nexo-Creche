@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexo Creche - Agenda Diária</title>
+    <title>Nexo Creche - Área do Professor</title>
 
     <link rel="shortcut icon" href="../../IMG/logo-nexo-icon.png" type="image/x-icon">
 
@@ -20,6 +20,7 @@
     <!-- CSS único do professor -->
     <link rel="stylesheet" href="/CSS/CSS - PROFESSOR/professor.css">
     <link rel="stylesheet" href="/CSS/CSS - GERAL/menu.css">
+    <link rel="stylesheet" href="/CSS/CSS - PROFESSOR/mensagemPR.css">
 </head>
 
 <body class="pagina-agenda">
@@ -58,10 +59,10 @@
                 </li>
 
                 <li class="item-menu-pais menu-turmas com-submenu">
-                    <a href="./minhasturmasPR.html">
+                    <a href="#">
                         <span>
                             <i class="bi bi-mortarboard"></i>
-                            Minhas turmas
+                            Minhas Turmas
                         </span>
                         <i class="bi bi-chevron-down seta-menu"></i>
                     </a>
@@ -80,7 +81,7 @@
                     <a href="#">
                         <span>
                             <i class="bi bi-book"></i>
-                            Agenda diária
+                            Agenda Diária
                         </span>
                         <i class="bi bi-chevron-down seta-menu"></i>
                     </a>
@@ -138,6 +139,33 @@
     </header>
     <!-- CONTEÚDO DA PÁGINA -->
     <main class="conteudo-pagina">
+
+                <div class="notificacao-container">
+            <a href="#" class="icone-mensagem-pais" id="btn-mensagens">
+                <i class="bi bi-envelope"></i>
+                <span class="badge">1</span> <!-- número de mensagens -->
+            </a>
+
+            <div class="dropdown-mensagens">
+                <h4>Mensagens</h4>
+
+                <ul>
+                    <li class="mensagem-item">
+                        <span class="mensagem-remetente">Ana Costa...</span>
+                        <span class="mensagem-preview">Informamos que a reuni...</span>
+                        <span class="mensagem-hora">07:30</span>
+                    </li>
+
+                    <li class="mensagem-item">
+                        <span class="mensagem-remetente">Joana Vieira</span>
+                        <span class="mensagem-preview">Bom dia Joana! Ok, vam...</span>
+                        <span class="mensagem-hora">07:30</span>
+                    </li>
+                </ul>
+
+                <a href="./mensagemPR.html" class="ver-todas">Ver todas as mensagens</a>
+            </div>
+        </div>
 
         <div class="topo-agenda">
             <div>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexo Creche - Minhas Turmas</title>
+    <title>Nexo Creche - Área do Professor</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="../../IMG/logo-nexo-icon.png" type="image/x-icon">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" href="/CSS/CSS - PROFESSOR/professor.css">
     <link rel="stylesheet" href="/CSS/CSS - GERAL/menu.css">
+    <link rel="stylesheet" href="/CSS/CSS - PROFESSOR/mensagemPR.css">
 </head>
 
 <body class="pagina-turmas">
@@ -59,10 +60,10 @@
                 </li>
 
                 <li class="item-menu-pais menu-turmas com-submenu">
-                    <a href="./minhasturmasPR.html">
+                    <a href="#">
                         <span>
                             <i class="bi bi-mortarboard"></i>
-                            Minhas turmas
+                            Minhas Turmas
                         </span>
                         <i class="bi bi-chevron-down seta-menu"></i>
                     </a>
@@ -78,10 +79,10 @@
                 </li>
 
                 <li class="item-menu-pais menu-agenda com-submenu">
-                    <a href="./agendadiariaPR.html">
+                    <a href="#">
                         <span>
                             <i class="bi bi-book"></i>
-                            Agenda diária
+                            Agenda Diária
                         </span>
                         <i class="bi bi-chevron-down seta-menu"></i>
                     </a>
@@ -141,18 +142,45 @@
     <!-- CONTEÚDO PRINCIPAL -->
     <main class="conteudo-pagina">
 
+        <div class="notificacao-container">
+            <a href="#" class="icone-mensagem-pais" id="btn-mensagens">
+                <i class="bi bi-envelope"></i>
+                <span class="badge">1</span> <!-- número de mensagens -->
+            </a>
+
+            <div class="dropdown-mensagens">
+                <h4>Mensagens</h4>
+
+                <ul>
+                    <li class="mensagem-item">
+                        <span class="mensagem-remetente">Ana Costa...</span>
+                        <span class="mensagem-preview">Informamos que a reuni...</span>
+                        <span class="mensagem-hora">07:30</span>
+                    </li>
+
+                    <li class="mensagem-item">
+                        <span class="mensagem-remetente">Joana Vieira</span>
+                        <span class="mensagem-preview">Bom dia Joana! Ok, vam...</span>
+                        <span class="mensagem-hora">07:30</span>
+                    </li>
+                </ul>
+
+                <a href="./mensagemPR.html" class="ver-todas">Ver todas as mensagens</a>
+            </div>
+        </div>
+
         <h1 class="como-esta-o-dia-turma">
             Veja como está o dia no Berçário II
         </h1>
 
         <!-- ALERTA -->
-        <div class="alerta">
+        <section class="alerta">
             <i class="bi bi-exclamation-triangle"></i>
             <strong class="titulo-alerta">Febre - Pedro Henrique</strong>
             <p class="texto-alerta">
                 Pedro apresentou febre de 38,2°C às 14:20. Foi medicado conforme autorização.
             </p>
-        </div>
+        </section>
 
         <!-- CARDS SUPERIORES -->
         <section class="box-informacoes">

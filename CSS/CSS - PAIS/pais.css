@@ -5,7 +5,7 @@
 :root {
     --roxo-principal: #5513D8;
     --roxo-claro: #E2DEFE;
-    --roxo-escuro: #140240;
+    --roxo-escuro: #320087;
 
     --fundo-pagina: #F3F1F5;
     --branco: #FFFFFF;
@@ -246,12 +246,11 @@ body.pagina-pais-mensagens .menu-pais-mensagens>a {
 
 .conteudo-pais {
     min-height: 100vh;
+    transform: translateY(-10px);
     width: calc(100% - var(--largura-menu-pais));
     margin-left: var(--largura-menu-pais);
-
     background-color: var(--fundo-pagina);
-    padding: 46px 28px 18px 28px;
-
+    padding: 0px 34px 30px 34px;
     position: relative;
 }
 
@@ -275,15 +274,13 @@ body.pagina-pais-inicio .topo-pais {
 
 body.pagina-pais-inicio .topo-pais h1 {
     margin: 0 0 4px 0;
-
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: var(--texto-principal);
 }
 
 body.pagina-pais-inicio .topo-pais p {
     margin: 0;
-
     font-size: 1rem;
     font-weight: 600;
     color: #3F3D44;
@@ -293,32 +290,44 @@ body.pagina-pais-inicio .topo-pais p {
 
 .alerta-pais {
     width: 100%;
-    min-height: 46px;
+    min-height: 48px;
 
     background-color: var(--alerta-bg);
     border-left: 4px solid var(--alerta-texto);
     border-radius: 8px;
 
     padding: 9px 14px;
-    margin-bottom: 10px;
-}
+    margin: 0 0 14px 0;
 
-.alerta-pais div {
     display: flex;
-    align-items: center;
-    gap: 5px;
-
-    color: var(--alerta-texto);
-    font-size: 0.78rem;
-    font-weight: 800;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 4px 5px;
 }
 
-.alerta-pais p {
-    margin: 3px 0 0 20px;
+.alerta-pais i {
+    color: var(--alerta-texto);
+    font-size: 1rem;
+    line-height: 1.2;
+    transform: translate(-5px, 8px) !important;
+    display: flex;
+}
 
-    font-size: 0.62rem;
+.titulo-alerta {
+    color: var(--alerta-texto);
+    font-size: 0.82rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.texto-alerta {
+    width: 100%;
+    margin: 0 0 0 22px;
+
+    font-size: 0.72rem;
     font-weight: 400;
     color: #6B4036;
+    line-height: 1.25;
 }
 
 /* Card da criança */
@@ -470,9 +479,10 @@ body.pagina-pais-inicio .topo-pais p {
 }
 
 .linha-tempo-pais {
-    background-color: var(--cinza-bloco);
+    background-color: var(--branco);
     border-radius: 8px;
-
+    box-shadow: var(--sombra-card);
+    border: 1px solid var(--borda-card);
     padding: 10px 9px;
 }
 
@@ -481,7 +491,7 @@ body.pagina-pais-inicio .topo-pais p {
 
     font-size: 0.98rem;
     font-weight: 800;
-    color: #3F3D44;
+    color: var(--texto-principal);
 }
 
 .evento-pais {
@@ -506,7 +516,7 @@ body.pagina-pais-inicio .topo-pais p {
 
     font-size: 0.68rem;
     font-weight: 800;
-    color: var(--texto-principal);
+    color: #3F3D44;
     line-height: 1.1;
 }
 
@@ -544,7 +554,8 @@ body.pagina-pais-inicio .topo-pais p {
 .bloco-info-pais {
     background-color: var(--cinza-bloco);
     border-radius: 8px;
-
+    box-shadow: var(--sombra-card);
+    border: 1px solid var(--borda-card);
     padding: 10px;
 }
 
@@ -553,7 +564,7 @@ body.pagina-pais-inicio .topo-pais p {
 
     font-size: 1rem;
     font-weight: 800;
-    color: #3F3D44;
+    color: var(--texto-principal);
 }
 
 .caixa-texto-pais {
@@ -586,7 +597,7 @@ body.pagina-pais-historico .conteudo-pais {
 
 .topo-historico-pais {
     width: 100%;
-
+    transform: translateY(-27px);
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -597,7 +608,7 @@ body.pagina-pais-historico .conteudo-pais {
 .topo-historico-pais h1 {
     margin: 0;
 
-    font-size: 1.35rem;
+    font-size: 1.55rem;
     font-weight: 800;
     color: var(--texto-principal);
 }
@@ -653,7 +664,7 @@ body.pagina-pais-historico .conteudo-pais {
     align-items: center;
     gap: 6px;
 
-    margin-left: 18px;
+    margin-left: 0px;
     margin-bottom: 2px;
 }
 
@@ -675,11 +686,12 @@ body.pagina-pais-historico .conteudo-pais {
 .card-historico-pais {
     width: 100%;
     min-height: 80px;
-
-    background-color: var(--cinza-bloco);
+    margin-top: 15px;
+    background-color: var(--branco);
     border-radius: 8px;
-
-    padding: 6px 10px 8px 10px;
+    box-shadow: var(--sombra-card);
+    border: 1px solid var(--borda-card);
+    padding: 10px;
 
     position: relative;
 }
@@ -744,7 +756,7 @@ body.pagina-pais-historico .conteudo-pais {
     grid-template-columns: repeat(5, minmax(90px, 1fr));
     gap: 8px;
 
-    background-color: var(--cinza-bloco-escuro);
+    background-color: var(--fundo-pagina);
     border-radius: 5px;
 
     padding: 5px 8px;
@@ -822,7 +834,7 @@ body.pagina-pais-mensagens .conteudo-pais {
 .topo-mensagens-pais h1 {
     margin: 0;
 
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: var(--texto-principal);
     line-height: 1;

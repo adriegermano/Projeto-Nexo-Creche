@@ -68,7 +68,7 @@ body {
     min-height: 100vh;
     width: calc(100% - var(--largura-menu));
     margin-left: var(--largura-menu);
-    padding: 30px 34px 40px 34px;
+    padding: 30px 34px;
     background-color: var(--fundo-pagina);
 }
 
@@ -541,7 +541,7 @@ body.pagina-inicio .conteudo-pagina {
 body.pagina-inicio .titulo-inicio {
     margin: 0 0 18px 0;
     padding: 0;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: var(--texto-principal);
 }
@@ -814,15 +814,14 @@ body.pagina-inicio .icone-seta {
 
 body.pagina-turmas .conteudo-pagina {
     position: relative;
-    padding: 42px 34px 36px 34px;
 }
 
 body.pagina-turmas .como-esta-o-dia-turma {
-    font-size: 1.32rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: var(--texto-principal);
 
-    margin: 0 0 32px 0;
+    margin: 0 0 15px 0;
 }
 
 body.pagina-turmas .alerta {
@@ -844,8 +843,10 @@ body.pagina-turmas .alerta {
 
 body.pagina-turmas .alerta i {
     color: var(--alerta-texto);
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.2;
+    transform: translate(-5px, 8px) !important;
+    display: flex;
 }
 
 body.pagina-turmas .titulo-alerta {
@@ -1195,7 +1196,7 @@ body.pagina-agenda .topo-agenda {
 
 body.pagina-agenda .titulo-agenda {
     margin: 0;
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: var(--texto-principal);
 }
@@ -1343,7 +1344,7 @@ body.pagina-agenda .card-aluno p {
 
 body.pagina-ocorrencias .topo-pagina {
     width: 100%;
-
+    transform: translateY(-20px);
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -1353,7 +1354,7 @@ body.pagina-ocorrencias .topo-pagina {
 
 body.pagina-ocorrencias .titulo-principal {
     margin: 0;
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: var(--texto-principal);
 }
@@ -1428,10 +1429,11 @@ body.pagina-ocorrencias .conteudo-ocorrencia {
 
 body.pagina-ocorrencias .icone-alerta {
     color: var(--rosa-texto);
-    font-size: 1rem;
+    font-size: 1.35rem;
     line-height: 1.2;
     margin-top: 2px;
     flex-shrink: 0;
+    transform: translateY(6px);
 }
 
 body.pagina-ocorrencias .icone-alerta.medio {
